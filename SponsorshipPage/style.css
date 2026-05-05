@@ -35,6 +35,10 @@ body {
     linear-gradient(180deg, #fffaf0 0%, #ffffff 34%, #f7f9fc 100%);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   width: 100%;
@@ -515,6 +519,160 @@ main {
   font-weight: 600;
 }
 
+.success-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.success-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.success-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top, rgba(201, 168, 76, 0.16), transparent 34%),
+    rgba(14, 61, 114, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.success-modal__dialog {
+  position: relative;
+  width: min(100%, 500px);
+  padding: 88px 34px 34px;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top, rgba(201, 168, 76, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 249, 252, 0.98));
+  border: 1px solid rgba(26, 95, 168, 0.12);
+  box-shadow: 0 30px 70px rgba(10, 35, 67, 0.28);
+  text-align: center;
+  transform: translateY(26px) scale(0.94);
+  opacity: 0;
+  transition: transform 0.45s cubic-bezier(.2, .9, .2, 1), opacity 0.35s ease;
+  overflow: visible;
+}
+
+.success-modal__dialog::before,
+.success-modal__dialog::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.success-modal__dialog::before {
+  width: 180px;
+  height: 180px;
+  top: -88px;
+  right: -36px;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.24), transparent 68%);
+}
+
+.success-modal__dialog::after {
+  width: 140px;
+  height: 140px;
+  bottom: -70px;
+  left: -24px;
+  background: radial-gradient(circle, rgba(26, 95, 168, 0.12), transparent 68%);
+}
+
+.success-modal.is-open .success-modal__dialog {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.success-modal__badge {
+  position: absolute;
+  top: -42px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--gold) 0%, #e0c676 100%);
+  box-shadow:
+    0 18px 32px rgba(201, 168, 76, 0.35),
+    0 0 0 10px rgba(255, 255, 255, 0.94);
+  animation: success-badge-float 2.8s ease-in-out infinite;
+}
+
+.success-modal__icon {
+  width: 60px;
+  height: 60px;
+}
+
+.success-modal__icon circle,
+.success-modal__icon path {
+  fill: none;
+  stroke: var(--white);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.success-modal__icon circle {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.success-modal__icon path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.success-modal.is-open .success-modal__icon circle {
+  animation: success-stroke 0.65s ease forwards 0.15s;
+}
+
+.success-modal.is-open .success-modal__icon path {
+  animation: success-stroke 0.45s ease forwards 0.5s;
+}
+
+.success-modal__eyebrow {
+  margin-bottom: 12px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+}
+
+.success-modal h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--blue-dk);
+  font-size: clamp(30px, 4vw, 40px);
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.success-modal__message {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0 auto 26px;
+  max-width: 34ch;
+}
+
+.success-modal__button {
+  min-width: 180px;
+  border: none;
+  cursor: pointer;
+}
+
 footer {
   padding: 0 5% 42px;
 }
@@ -610,6 +768,36 @@ footer {
 
   .nav-name span:last-child {
     display: none;
+  }
+
+  .success-modal__dialog {
+    padding: 78px 22px 24px;
+    border-radius: 24px;
+  }
+
+  .success-modal__badge {
+    width: 98px;
+    height: 98px;
+    top: -36px;
+  }
+
+  .success-modal__message {
+    font-size: 15px;
+  }
+}
+
+@keyframes success-stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes success-badge-float {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-6px);
   }
 }
 
