@@ -1,6 +1,16 @@
 const form = document.getElementById("inquire-form");
 const responseMessage = document.getElementById("form-response");
 
+(function () {
+  const loader = document.getElementById('pageLoader');
+  function hideLoader() { loader.classList.add('hidden'); }
+  if (document.readyState === 'complete') {
+    setTimeout(hideLoader, 300);
+  } else {
+    window.addEventListener('load', function () { setTimeout(hideLoader, 300); });
+  }
+})();
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
