@@ -30,12 +30,10 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="../Landing%20Page/index.html#about">About</a></li>
-        <li><a href="../Landing%20Page/index.html#what-we-do">What We Do</a></li>
+        <li><a href="../Landing%20Page/index.html#what-we-do">About APINDO</a></li>
         <li><a href="../Landing%20Page/index.html#vismis">Vision & Mission</a></li>
         <li><a href="../Landing%20Page/index.html#news">News</a></li>
         <li><a href="../SponsorshipPage/index.html">Sponsorship</a></li>
-        <li><a href="../Landing%20Page/index.html#contact">Contact</a></li>
         <li><a href="../Inquire Page/index.html">Inquire</a></li>
       </ul>
 
@@ -45,12 +43,11 @@
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
-      <a href="../Landing Page/index.html#about" onclick="toggleMenu()">About</a>
-      <a href="../Landing Page/index.html#what-we-do" onclick="toggleMenu()">What We Do</a>
+      
+      <a href="../Landing Page/index.html#what-we-do" onclick="toggleMenu()">About APINDO</a>
       <a href="../Landing Page/index.html#vismis" onclick="toggleMenu()">Vision & Mission</a>
       <a href="../Landing Page/index.html#news" onclick="toggleMenu()">News</a>
       <a href="../SponsorshipPage/index.html" onclick="toggleMenu()">Sponsorship</a>
-      <a href="../Landing Page/index.html#contact" onclick="toggleMenu()">Contact</a>
       <a href="../Inquire Page/index.html" onclick="toggleMenu()">Inquire</a>
     </div>
 
@@ -108,6 +105,41 @@
       </div>
     </section>
 
+    <div
+      class="success-modal"
+      id="successModal"
+      aria-hidden="true"
+    >
+      <div class="success-modal__backdrop" data-modal-close></div>
+      <div
+        class="success-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="successModalTitle"
+        aria-describedby="successModalMessage"
+      >
+        <div class="success-modal__badge" aria-hidden="true">
+          <svg viewBox="0 0 64 64" class="success-modal__icon">
+            <circle cx="32" cy="32" r="30" pathLength="100"></circle>
+            <path d="M19 33.5 28 42.5 45 24.5" pathLength="100"></path>
+          </svg>
+        </div>
+        <p class="success-modal__eyebrow">Message sent</p>
+        <h3 id="successModalTitle">We received your inquiry.</h3>
+        <p id="successModalMessage" class="success-modal__message">
+          Thank you for reaching out to APINDO Bali. Our team will review your
+          message and get back to you soon.
+        </p>
+        <button
+          type="button"
+          class="btn btn-gold success-modal__button"
+          data-modal-close
+        >
+          OK
+        </button>
+      </div>
+    </div>
+
     <footer id="contact">
       <div class="footer-grid">
         <div class="footer-brand">
@@ -135,11 +167,7 @@
           <ul>
             <li>
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-              <a href="#about">About APINDO</a>
-            </li>
-            <li>
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-              <a href="#what-we-do">What We Do</a>
+              <a href="#what-we-do">About APINDO</a>
             </li>
             <li>
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
