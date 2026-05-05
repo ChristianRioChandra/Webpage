@@ -12,7 +12,6 @@ function toggleMenu() {
   }
 })();
 
-// Close mobile menu on outside click
 document.addEventListener('click', function(e) {
   const menu = document.getElementById('mobileMenu');
   const nav  = document.querySelector('nav');
@@ -21,7 +20,6 @@ document.addEventListener('click', function(e) {
   }
 });
 
-// News carousel functionality
 const newsEvents = [
   {
     title: "Mayday",
@@ -168,7 +166,7 @@ function initNewsCarousel() {
   const nextBtn = document.querySelector('.carousel-btn.next');
   let currentIndex = 0;
   const totalCards = newsEvents.length;
-  let cardWidth = 296; // 280px card + 16px gap
+  let cardWidth = 296;
   let cardsToShow = 3;
 
   function updateCardsToShow() {
