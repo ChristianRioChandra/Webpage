@@ -25,7 +25,7 @@ const newsEvents = [
     title: "Mayday",
     date: " May 1, 2026",
     description: "The Bali APINDO Provincial Leadership Council (DPK) participated in the Bali Provincial May Day celebrations held at Puputan Margarana Field in Renon on Friday, May 1, 2026. The agenda included a Fun Walk & Zumba, a Cheap Market & Entertainment, and health checks. Furthermore, on the same day, the Denpasar City APINDO DPK also participated in the Denpasar City May Day celebrations held at Sidakarya Beach in Denpasar. With the theme \"Collaboration to Achieve Industrial Progress and Worker Welfare,\" this event honored Denpasar workers. Beach cleanups, the planting of ketapang and mangrove trees, and creative displays by Denpasar workers were also included.",
-    images: ["../Asset/eventphoto/mayday1.png", "../Asset/eventphoto/mayday2.png"]
+    images: ["../Asset/EventPhoto/mayday1.png", "../Asset/EventPhoto/mayday2.png"]
   },
   {
     title: "Talkshow APINDO",
