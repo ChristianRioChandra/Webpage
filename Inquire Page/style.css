@@ -204,16 +204,19 @@ nav {
 
 .flower-corner {
   position: absolute;
-  width: 300px;
+  width: clamp(120px, 24vw, 300px);
   pointer-events: none;
   opacity: 0.85;
 }
 
-.flower-corner-top { top: -20px; left: -20px; }
+.flower-corner-top {
+  top: clamp(-20px, -2vw, -10px);
+  left: clamp(-20px, -2vw, -10px);
+}
 
 .flower-corner-bottom {
-  bottom: -20px;
-  right: -20px;
+  bottom: clamp(-20px, -2vw, -10px);
+  right: clamp(-20px, -2vw, -10px);
   transform: rotate(180deg);
 }
 

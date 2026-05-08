@@ -223,20 +223,20 @@ nav {
 
 .flower-corner {
   position: absolute;
-  width: 300px;
+  width: clamp(120px, 24vw, 300px);
   height: auto;
   pointer-events: none;
   opacity: 0.85;
 }
 
 .flower-corner-top {
-  top: -20px;
-  left: -20px;
+  top: clamp(-20px, -2vw, -10px);
+  left: clamp(-20px, -2vw, -10px);
 }
 
 .flower-corner-bottom {
-  bottom: -20px;
-  right: -20px;
+  bottom: clamp(-20px, -2vw, -10px);
+  right: clamp(-20px, -2vw, -10px);
   transform: rotate(180deg);
 }
 
@@ -1107,6 +1107,10 @@ footer {
 @media (max-width: 640px) {
   .nav-links  { display: none; }
   .hamburger  { display: flex; }
+  .hero-logo {
+    width: min(68vw, 280px);
+    height: auto;
+  }
   .affiliates {
     padding: 60px 5% 56px;
   }
