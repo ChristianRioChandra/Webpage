@@ -9,6 +9,17 @@ function toggleMenu() {
   }
 }
 
+(function injectScrollbarStyles() {
+  const style = document.createElement('style');
+  style.textContent = `
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f5f6f8; }
+    ::-webkit-scrollbar-thumb { background: #1a5fa8; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #0e3d72; }
+  `;
+  document.head.appendChild(style);
+})();
+
 (function () {
   const loader = document.getElementById('pageLoader');
   function hideLoader() { loader.classList.add('hidden'); }
