@@ -1,5 +1,12 @@
 function toggleMenu() {
-  document.getElementById("mobileMenu").classList.toggle("open");
+  const menu = document.getElementById("mobileMenu");
+  const trigger = document.querySelector(".hamburger");
+  if (!menu) return;
+
+  const isOpen = menu.classList.toggle("open");
+  if (trigger) {
+    trigger.setAttribute("aria-expanded", String(isOpen));
+  }
 }
 
 const form = document.getElementById("inquire-form");
@@ -32,6 +39,10 @@ document.addEventListener("click", function (event) {
 
   if (menu && nav && menu.classList.contains("open") && !nav.contains(event.target)) {
     menu.classList.remove("open");
+    const trigger = document.querySelector(".hamburger");
+    if (trigger) {
+      trigger.setAttribute("aria-expanded", "false");
+    }
   }
 });
 

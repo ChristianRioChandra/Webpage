@@ -225,6 +225,8 @@ nav {
   gap: 5px;
   cursor: pointer;
   padding: 6px;
+  background: transparent;
+  border: 0;
 }
 
 .hamburger span {
@@ -918,7 +920,7 @@ nav {
   text-align: center;
 }
 
-.leader h1 {
+.leader h2 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(35px, 3.5vw, 32px);
   color: var(--blue-dk);

@@ -137,6 +137,8 @@ nav {
   gap: 5px;
   cursor: pointer;
   padding: 6px;
+  background: transparent;
+  border: 0;
 }
 
 .hamburger span {
@@ -238,6 +240,14 @@ nav {
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 5vw, 44px);
+  color: #fff;
+  line-height: 1.18;
+  margin-bottom: 10px;
 }
 
 .hero p.desc {
@@ -467,10 +477,14 @@ nav {
   stroke-linejoin: round;
 }
 
-.success-modal__icon circle,
+.success-modal__icon circle {
+  stroke-dasharray: 188.5;
+  stroke-dashoffset: 188.5;
+}
+
 .success-modal__icon path {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
+  stroke-dasharray: 35;
+  stroke-dashoffset: 35;
 }
 
 .success-modal.is-open .success-modal__icon circle {

@@ -1,5 +1,12 @@
 function toggleMenu() {
-  document.getElementById("mobileMenu").classList.toggle("open");
+  const menu = document.getElementById("mobileMenu");
+  const trigger = document.querySelector(".hamburger");
+  if (!menu) return;
+
+  const isOpen = menu.classList.toggle("open");
+  if (trigger) {
+    trigger.setAttribute("aria-expanded", String(isOpen));
+  }
 }
 
 (function () {
@@ -21,6 +28,10 @@ document.addEventListener("click", function (e) {
   const nav = document.querySelector("nav");
   if (menu.classList.contains("open") && !nav.contains(e.target)) {
     menu.classList.remove("open");
+    const trigger = document.querySelector(".hamburger");
+    if (trigger) {
+      trigger.setAttribute("aria-expanded", "false");
+    }
   }
 });
 

@@ -24,7 +24,7 @@
     </div>
 
     <nav>
-      <a href="../Landing Page/index.html" class="nav-logo">
+      <a href="../Landing%20Page/index.html" class="nav-logo">
         <img src="../Asset/logo.png" alt="APINDO Logo" class="logo-img" />
         <div class="nav-name">
           <span>ASOSIASI PENGUSAHA INDONESIA</span>
@@ -37,30 +37,37 @@
           <a href="../Landing%20Page/index.html#what-we-do">About APINDO</a>
         </li>
         <li>
-          <a href="../Landing%20Page/index.html#vismis">Vision & Mission</a>
+          <a href="../Landing%20Page/index.html#visimisi">Vision & Mission</a>
         </li>
         <li><a href="../Landing%20Page/index.html#news">News</a></li>
         <li><a href="../SponsorshipPage/index.html">Sponsorship</a></li>
-        <li><a href="../Inquire Page/index.html">Inquire</a></li>
+        <li><a href="./index.html">Inquire</a></li>
       </ul>
 
-      <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <button
+        type="button"
+        class="hamburger"
+        onclick="toggleMenu()"
+        aria-label="Toggle menu"
+        aria-controls="mobileMenu"
+        aria-expanded="false"
+      >
         <span></span><span></span><span></span>
-      </div>
+      </button>
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
-      <a href="../Landing Page/index.html#what-we-do" onclick="toggleMenu()"
+      <a href="../Landing%20Page/index.html#what-we-do" onclick="toggleMenu()"
         >About APINDO</a
       >
-      <a href="../Landing Page/index.html#vismis" onclick="toggleMenu()"
+      <a href="../Landing%20Page/index.html#visimisi" onclick="toggleMenu()"
         >Vision & Mission</a
       >
-      <a href="../Landing Page/index.html#news" onclick="toggleMenu()">News</a>
+      <a href="../Landing%20Page/index.html#news" onclick="toggleMenu()">News</a>
       <a href="../SponsorshipPage/index.html" onclick="toggleMenu()"
         >Sponsorship</a
       >
-      <a href="../Inquire Page/index.html" onclick="toggleMenu()">Inquire</a>
+      <a href="./index.html" onclick="toggleMenu()">Inquire</a>
     </div>
 
     <section class="hero">
@@ -77,6 +84,7 @@
 
       <div class="hero-inner">
         <p class="tagline">Inquiry · Hubungi Kami</p>
+        <h1>Contact APINDO Bali</h1>
         <img
           src="../Asset/fullLogo_whitebg.png"
           alt="APINDO Logo"
@@ -165,8 +173,8 @@
       >
         <div class="success-modal__badge" aria-hidden="true">
           <svg viewBox="0 0 64 64" class="success-modal__icon">
-            <circle cx="32" cy="32" r="30" pathLength="100"></circle>
-            <path d="M19 33.5 28 42.5 45 24.5" pathLength="100"></path>
+            <circle cx="32" cy="32" r="30"></circle>
+            <path d="M19 33.5 28 42.5 45 24.5"></path>
           </svg>
         </div>
         <p class="success-modal__eyebrow">Message sent</p>
@@ -185,7 +193,7 @@
       </div>
     </div>
 
-    <footer id="contact">
+    <footer id="footer-contact">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="../Asset/logo.png" alt="APINDO Logo" class="footer-logo" />

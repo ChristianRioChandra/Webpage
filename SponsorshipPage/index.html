@@ -31,15 +31,22 @@
 
       <ul class="nav-links">
         <li><a href="../Landing%20Page/index.html#what-we-do">What We Do</a></li>
-        <li><a href="../Landing%20Page/index.html#vismis">Vision & Mission</a></li>
+        <li><a href="../Landing%20Page/index.html#visimisi">Vision & Mission</a></li>
         <li><a href="../Landing%20Page/index.html#news">News</a></li>
         <li><a href="../SponsorshipPage/index.html">Sponsorship</a></li>
-        <li><a href="../Inquire Page/index.html">Inquire</a></li>
+        <li><a href="../Inquire%20Page/index.html">Inquire</a></li>
       </ul>
 
-      <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <button
+        type="button"
+        class="hamburger"
+        onclick="toggleMenu()"
+        aria-label="Toggle menu"
+        aria-controls="mobileMenu"
+        aria-expanded="false"
+      >
         <span></span><span></span><span></span>
-      </div>
+      </button>
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
@@ -47,7 +54,7 @@
       <a href="../Landing%20Page/index.html#what-we-do" onclick="toggleMenu()"
         >What We Do</a
       >
-      <a href="../Landing%20Page/index.html#vismis" onclick="toggleMenu()"
+      <a href="../Landing%20Page/index.html#visimisi" onclick="toggleMenu()"
         >Vision & Mission</a
       >
       <a href="../Landing%20Page/index.html#news" onclick="toggleMenu()"
@@ -55,7 +62,7 @@
       >
       <a href="../SponsorshipPage/index.html" onclick="toggleMenu()">Sponsorship</a>
       
-      <a href="../Inquire Page/index.html" onclick="toggleMenu()">Inquire</a>
+      <a href="../Inquire%20Page/index.html" onclick="toggleMenu()">Inquire</a>
     </div>
 
     <main>
@@ -226,8 +233,8 @@
       >
         <div class="success-modal__badge" aria-hidden="true">
           <svg viewBox="0 0 64 64" class="success-modal__icon">
-            <circle cx="32" cy="32" r="30" pathLength="100"></circle>
-            <path d="M19 33.5 28 42.5 45 24.5" pathLength="100"></path>
+            <circle cx="32" cy="32" r="30"></circle>
+            <path d="M19 33.5 28 42.5 45 24.5"></path>
           </svg>
         </div>
         <p class="success-modal__eyebrow">Application received</p>
