@@ -1,24 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow" />
     <title>APINDO Inquiry</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../Asset/logo.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
-  <div class="page-loader" id="pageLoader">
-    <div class="loader-logo">
-      <div class="loader-ring"></div>
-      <div class="loader-ring loader-ring--2"></div>
+    <div class="page-loader" id="pageLoader">
+      <div class="loader-logo">
+        <div class="loader-ring"></div>
+        <div class="loader-ring loader-ring--2"></div>
+      </div>
+      <p class="loader-text">APINDO · Bali</p>
     </div>
-    <p class="loader-text">APINDO · Bali</p>
-  </div>
 
     <nav>
       <a href="../Landing Page/index.html" class="nav-logo">
@@ -30,8 +33,12 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="../Landing%20Page/index.html#what-we-do">About APINDO</a></li>
-        <li><a href="../Landing%20Page/index.html#vismis">Vision & Mission</a></li>
+        <li>
+          <a href="../Landing%20Page/index.html#what-we-do">About APINDO</a>
+        </li>
+        <li>
+          <a href="../Landing%20Page/index.html#vismis">Vision & Mission</a>
+        </li>
         <li><a href="../Landing%20Page/index.html#news">News</a></li>
         <li><a href="../SponsorshipPage/index.html">Sponsorship</a></li>
         <li><a href="../Inquire Page/index.html">Inquire</a></li>
@@ -43,25 +50,42 @@
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
-      
-      <a href="../Landing Page/index.html#what-we-do" onclick="toggleMenu()">About APINDO</a>
-      <a href="../Landing Page/index.html#vismis" onclick="toggleMenu()">Vision & Mission</a>
+      <a href="../Landing Page/index.html#what-we-do" onclick="toggleMenu()"
+        >About APINDO</a
+      >
+      <a href="../Landing Page/index.html#vismis" onclick="toggleMenu()"
+        >Vision & Mission</a
+      >
       <a href="../Landing Page/index.html#news" onclick="toggleMenu()">News</a>
-      <a href="../SponsorshipPage/index.html" onclick="toggleMenu()">Sponsorship</a>
+      <a href="../SponsorshipPage/index.html" onclick="toggleMenu()"
+        >Sponsorship</a
+      >
       <a href="../Inquire Page/index.html" onclick="toggleMenu()">Inquire</a>
     </div>
 
     <section class="hero">
-      <img src="../Asset/flower_corner.png" alt="" class="flower-corner flower-corner-top" />
-      <img src="../Asset/flower_corner.png" alt="" class="flower-corner flower-corner-bottom" />
+      <img
+        src="../Asset/flower_corner.png"
+        alt=""
+        class="flower-corner flower-corner-top"
+      />
+      <img
+        src="../Asset/flower_corner.png"
+        alt=""
+        class="flower-corner flower-corner-bottom"
+      />
 
       <div class="hero-inner">
         <p class="tagline">Inquiry · Hubungi Kami</p>
-        <img src="../Asset/fullLogo_whitebg.png" alt="APINDO Logo" class="hero-logo" />
+        <img
+          src="../Asset/fullLogo_whitebg.png"
+          alt="APINDO Logo"
+          class="hero-logo"
+        />
 
         <p class="desc">
-          Any questions about membership, events, or partnerships? Please fill out the form below,
-          and the APINDO Bali team will contact you shortly.
+          Any questions about membership, events, or partnerships? Please fill
+          out the form below, and the APINDO Bali team will contact you shortly.
         </p>
 
         <a href="#contact" class="btn btn-gold">Fill Out Form</a>
@@ -74,28 +98,53 @@
           <p class="section-label">Inquire</p>
           <h2>Contact APINDO Bali</h2>
           <p class="intro">
-            Any questions about membership, events, or partnerships? Please fill out the form below.
+            Any questions about membership, events, or partnerships? Please fill
+            out the form below.
           </p>
 
           <form id="inquire-form" class="inquire-form" novalidate>
             <div class="field-row">
               <label for="full-name">Full Name</label>
-              <input type="text" id="full-name" name="fullName" placeholder="Your Full name" required />
+              <input
+                type="text"
+                id="full-name"
+                name="fullName"
+                placeholder="Your Full name"
+                required
+              />
             </div>
 
             <div class="field-row">
               <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="Your email@example.com" required />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your email@example.com"
+                required
+              />
             </div>
 
             <div class="field-row">
               <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="Question title" required />
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Question title"
+                required
+              />
             </div>
 
             <div class="field-row">
               <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Write your message here" rows="6" required></textarea>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Write your message here"
+                rows="6"
+                required
+              ></textarea>
             </div>
 
             <button type="submit" class="btn btn-gold">Send Message</button>
@@ -105,11 +154,7 @@
       </div>
     </section>
 
-    <div
-      class="success-modal"
-      id="successModal"
-      aria-hidden="true"
-    >
+    <div class="success-modal" id="successModal" aria-hidden="true">
       <div class="success-modal__backdrop" data-modal-close></div>
       <div
         class="success-modal__dialog"
@@ -144,16 +189,38 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="../Asset/logo.png" alt="APINDO Logo" class="footer-logo" />
-          <h3>APINDO</h3>
-          <p>Entrepreneurs Union · Indonesia Advances<br />© 2026 APINDO Bali. All rights reserved.</p>
+          <h3>APINDO Bali</h3>
+          <p>
+            Entrepreneurs Union · Indonesia Advances<br />© 2026 APINDO Bali.
+            All rights reserved.
+          </p>
           <div class="footer-socials">
-            <a class="social-btn" href="https://www.facebook.com/share/1De7yfZ5YW/?mibextid=wwXIfr" aria-label="Facebook">
+            <a
+              class="social-btn"
+              href="https://www.facebook.com/share/1De7yfZ5YW/?mibextid=wwXIfr"
+              aria-label="Facebook"
+            >
               <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                <path
+                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                />
               </svg>
             </a>
-            <a class="social-btn" href="https://www.instagram.com/apindo_bali/" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+            <a
+              class="social-btn"
+              href="https://www.instagram.com/apindo_bali/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
@@ -166,15 +233,42 @@
           <h4>Quick Links</h4>
           <ul>
             <li>
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+              <svg
+                width="14"
+                height="14"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
               <a href="#what-we-do">About APINDO</a>
             </li>
             <li>
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+              <svg
+                width="14"
+                height="14"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
               <a href="#news">News & Media</a>
             </li>
             <li>
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+              <svg
+                width="14"
+                height="14"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
               <a href="../SponsorshipPage/index.html">Sponsorship</a>
             </li>
           </ul>
@@ -184,31 +278,61 @@
           <h4>Contact</h4>
           <ul>
             <li>
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
+              <svg
+                width="14"
+                height="14"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
               </svg>
-              <a href="mailto:dppapindo.bali@gmail.com">dppapindo.bali@gmail.com</a>
+              <a href="mailto:dppapindo.bali@gmail.com"
+                >dppapindo.bali@gmail.com</a
+              >
+            </li>
+            <li>
+              <svg
+                width="14"
+                height="14"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Jl. Menuh No.1, Dangin Puri Kangin, Kec. Denpasar Utara, Kota
+              Denpasar, Bali 80236
             </li>
             <li>
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/>
-                <circle cx="12" cy="10" r="3"/>
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 
+                013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 
+                01-.45 2.11L6.91 8.1a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
               </svg>
-              Jl. Menuh No.1, Dangin Puri Kangin, Kec. Denpasar Utara, Kota Denpasar, Bali 80236
+              +62 859-3536-2062 <br>(SINTHA SUTAMI - Sekretaris DPP APINDO Bali)
             </li>
             <li>
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 
+                013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 
+                01-.45 2.11L6.91 8.1a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
               </svg>
-              (0361) 263243
+              +62 819-3639-8325 <br>(SHINTIA NIRMALA - Staff DPP APINDO Bali)
             </li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        © 2026 APINDO Bali – Asosiasi Pengusaha Indonesia · Provinsi Bali · Entrepreneurs Union, Indonesia Advances
+        © 2026 APINDO Bali - Asosiasi Pengusaha Indonesia · Provinsi Bali ·
+        Entrepreneurs Union, Indonesia Advances
       </div>
     </footer>
 
