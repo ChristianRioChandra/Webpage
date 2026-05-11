@@ -299,7 +299,6 @@ main {
 
 .hero-visual {
   position: relative;
-  min-height: 540px;
   border-radius: 28px;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -313,8 +312,7 @@ main {
 .hero-visual::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(9, 28, 53, 0.04) 0%, rgba(9, 28, 53, 0.52) 100%);
+  inset: 0;  
 }
 
 .hero-badge {
@@ -704,4 +702,15 @@ footer {
   object-fit: contain;
   padding: 3px;
   margin-bottom: 14px;
+}
+
+.image-source {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+.image-source a {
+  color: var(--blue);
+  text-decoration: underline;
 }
