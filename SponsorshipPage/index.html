@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../Asset/logo.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -29,38 +30,39 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="../Landing%20Page/index.html#about">About</a></li>
         <li><a href="../Landing%20Page/index.html#what-we-do">What We Do</a></li>
-        <li><a href="../Landing%20Page/index.html#vismis">Vision & Mission</a></li>
+        <li><a href="../Landing%20Page/index.html#visimisi">Vision & Mission</a></li>
         <li><a href="../Landing%20Page/index.html#news">News</a></li>
         <li><a href="../SponsorshipPage/index.html">Sponsorship</a></li>
-        <li><a href="../Landing%20Page/index.html#contact">Contact</a></li>
-        <li><a href="../Inquire Page/index.html">Inquire</a></li>
+        <li><a href="../Inquire%20Page/index.html">Inquire</a></li>
       </ul>
 
-      <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <button
+        type="button"
+        class="hamburger"
+        onclick="toggleMenu()"
+        aria-label="Toggle menu"
+        aria-controls="mobileMenu"
+        aria-expanded="false"
+      >
         <span></span><span></span><span></span>
-      </div>
+      </button>
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
-      <a href="../Landing%20Page/index.html#about" onclick="toggleMenu()"
-        >About</a
-      >
+      
       <a href="../Landing%20Page/index.html#what-we-do" onclick="toggleMenu()"
         >What We Do</a
       >
-      <a href="../Landing%20Page/index.html#vismis" onclick="toggleMenu()"
+      <a href="../Landing%20Page/index.html#visimisi" onclick="toggleMenu()"
         >Vision & Mission</a
       >
       <a href="../Landing%20Page/index.html#news" onclick="toggleMenu()"
         >News</a
       >
       <a href="../SponsorshipPage/index.html" onclick="toggleMenu()">Sponsorship</a>
-      <a href="../Landing%20Page/index.html#contact" onclick="toggleMenu()"
-        >Contact</a
-      >
-      <a href="../Inquire Page/index.html" onclick="toggleMenu()">Inquire</a>
+      
+      <a href="../Inquire%20Page/index.html" onclick="toggleMenu()">Inquire</a>
     </div>
 
     <main>
@@ -68,11 +70,10 @@
         <div class="hero-copy">
           <p class="eyebrow">Partner With APINDO</p>
           <h1>
-            Submit your sponsorship proposal and build meaningful business
-            visibility.
+            Submit your sponsorship proposal 
           </h1>
           <p class="hero-text">
-            We welcome sponsors who want to collaborate with APINDO through
+            We welcome sponsors who want to collaborate with APINDO Bali through
             events, programs, business outreach, and strategic partnerships that
             create mutual value.
           </p>
@@ -128,14 +129,11 @@
         <div class="story-card">
           <p class="section-label">Why sponsor us</p>
           <h2>
-            Sponsorship with APINDO is built around relevance, reach, and real
-            collaboration.
+            Built around relevance, reach, and collaboration.
           </h2>
           <p>
-            We work with partners who want to support business growth while also
-            increasing their own visibility. A strong sponsorship proposal helps
-            us understand your objectives, preferred activations, and the kind
-            of partnership experience you want to create.
+            We are willing to work with partners who want to support business growth while also
+            increasing their own visibility.
           </p>
 
           <div class="story-image">
@@ -159,7 +157,7 @@
             <div>
               <h3>Events</h3>
               <p>
-                Align your brand with forums, conferences, and engagement
+                Promote your brand in forums, conferences, and engagement
                 programs led by APINDO.
               </p>
             </div>
@@ -228,21 +226,52 @@
             <button type="submit" class="btn btn-gold btn-submit">
               Send Sponsorship Application
             </button>
-            <p class="form-note">
-              This form records your proposal and can be connected to email or a
-              backend later.
-            </p>
             <p class="form-status" id="formStatus" aria-live="polite"></p>
           </form>
         </div>
       </section>
     </main>
 
+    <div
+      class="success-modal"
+      id="successModal"
+      aria-hidden="true"
+    >
+      <div class="success-modal__backdrop" data-modal-close></div>
+      <div
+        class="success-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="successModalTitle"
+        aria-describedby="successModalMessage"
+      >
+        <div class="success-modal__badge" aria-hidden="true">
+          <svg viewBox="0 0 64 64" class="success-modal__icon">
+            <circle cx="32" cy="32" r="30"></circle>
+            <path d="M19 33.5 28 42.5 45 24.5"></path>
+          </svg>
+        </div>
+        <p class="success-modal__eyebrow">Application received</p>
+        <h3 id="successModalTitle">Thank you for your proposal.</h3>
+        <p id="successModalMessage" class="success-modal__message">
+          Your sponsorship details have been submitted successfully. Our team
+          will review the information and reach out with the next steps.
+        </p>
+        <button
+          type="button"
+          class="btn btn-gold success-modal__button"
+          data-modal-close
+        >
+          OK
+        </button>
+      </div>
+    </div>
+
     <footer id="contact">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="../Asset/logo.png" alt="APINDO Logo" class="footer-logo" />
-          <h3>APINDO</h3>
+          <h3>APINDO Bali</h3>
           <p>
             Entrepreneurs Union · Indonesia Advances<br />© 2026 APINDO Bali.
             All rights reserved.
@@ -377,19 +406,20 @@
               Denpasar, Bali 80236
             </li>
             <li>
-              <svg
-                width="14"
-                height="14"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
-                />
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 
+                013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 
+                01-.45 2.11L6.91 8.1a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
               </svg>
-              (0361) 263243
+              +62 859-3536-2062 <br>(SINTHA SUTAMI - Sekretaris DPP APINDO Bali)
+            </li>
+            <li>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 
+                013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 
+                01-.45 2.11L6.91 8.1a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              +62 819-3639-8325 <br>(SHINTIA NIRMALA - Staff DPP APINDO Bali)
             </li>
           </ul>
         </div>
